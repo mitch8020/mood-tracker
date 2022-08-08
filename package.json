@@ -1,8 +1,12 @@
 {
-  "name": "simple-express-app-submission-answer",
+  "name": "mood-tracker-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "track your mood",
   "main": "app.js",
+  "engines": {
+    "node": "12.11.1",
+    "npm":  "6.14.8"
+  }
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=production node app.js",
@@ -10,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mitch8020/simple-express-app-submission-answer.git"
+    "url": "git+https://github.com/mitch8020/mood-tracker.git"
   },
   "author": "JP Mitra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mitch8020/simple-express-app-submission-answer/issues"
+    "url": "https://github.com/mitch8020/mood-tracker/issues"
   },
-  "homepage": "https://github.com/mitch8020/simple-express-app-submission-answer#readme",
+  "homepage": "https://github.com/mitch8020/mood-tracker#readme",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "nodemon": "^2.0.19"
