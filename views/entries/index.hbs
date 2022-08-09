@@ -1,4 +1,4 @@
-<h3>Entries</h3>
+<h3>Public Entries</h3>
 <div class="row">
   {{#each entries}}
     <div class="col s12 m4">
@@ -15,9 +15,9 @@
           <br>
           <p>{{stripTags (truncate body 150)}}</p>
         </div>
-        {{!-- <div class="card-action center-align">
+        <div class="card-action center-align">
           <a href="/entries/{{_id}}" class="btn grey">Read More</a>
-        </div> --}}
+        </div>
       </div>
     </div>
   {{else}}
