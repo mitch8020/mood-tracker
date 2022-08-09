@@ -32,8 +32,17 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
+// Handlebars Helpers
+const { formatDate, stripTags, truncate, editIcon, select } = require('./helpers/hbs')
+
 // Handlebars
-app.engine('.hbs', exphbs.engine({ defaultLayout: 'main', extname: '.hbs' }))
+app.engine('.hbs', exphbs.engine({ helpers: {
+  formatDate,
+  stripTags,
+  truncate,
+  editIcon,
+  select
+}, defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', '.hbs')
 
 // Sessions
@@ -57,6 +66,7 @@ app.use(function (req, res, next) {
 // Routes
 app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/auth'))
+app.use('/entries', require('./routes/entries'))
 
 // PORT Connection
 app.listen(PORT, ()=>{
