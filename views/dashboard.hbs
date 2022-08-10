@@ -1,26 +1,20 @@
+<h3>Welcome {{name}}!</h3>
+<div class="divider"></div>
 <h5>Dashboard</h5>
-<h3>Welcome {{name}}</h3>
 <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          {{!-- {{{editIcon user ../user _id}}} --}}
-        </div>
-        <div class="card-content center-align">
-          <h4>This is where the mood chart will go</h4>
-          {{!-- <div class="chip">
-            <img src="{{user.image}}" alt="user image">
-            <a href="/entries/user/{{user._id}}">{{user.displayName}}</a>
-            <p>{{formatDate createdAt "M/D/YY, h:mm a"}}</p>
-          </div>
-          <br>
-          <p>{{stripTags (truncate body 150)}}</p> --}}
-        </div>
-        {{!-- <div class="card-action center-align">
-          <a href="/entries/{{_id}}" class="btn grey">Read More</a>
-        </div> --}}
+  <div class="card">
+    <div class="card-content center-align">
+      <h4>Mood Chart</h4>
+      <p>Under Construction</p>
+      <div class="container mood-graph">
+        <svg class="bar-chart">{{data}}</svg>
       </div>
     </div>
-<p>Here are your entries:</p>
+  </div>
+</div>
+<br>
+<h5>Your Mood Entries:</h5>
+<div class="divider"></div>
 {{#if entries}}
   <table class="striped">
     <thead>
@@ -55,3 +49,6 @@
 {{else}}
   <p>You have not added any entries.</p>
 {{/if}}
+<br>
+
+<script type="module" src="/js/main.js"></script>
