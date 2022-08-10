@@ -20,3 +20,14 @@ p {
 .img-small {
   width: 180px;
 }
+
+.social {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.social i {
+  font-size: 2.5rem;
+  width: 4rem;
+  color: white;
+}
