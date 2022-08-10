@@ -27,4 +27,11 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
   }
 })
 
+// @desc    Data Visualization
+// @route   GET /api/data
+router.get('/api/data', (req, res) => {
+  const data = [100, 50, 180, 40, 200, 160]; // assuming this is coming from the database
+  res.json(data);
+});
+
 module.exports = router
